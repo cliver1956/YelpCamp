@@ -15,7 +15,7 @@ const   express             = require("express"),
         campgroundRoutes    = require("./routes/campgrounds"),
         indexRoutes         = require("./routes/index")
 
-mongoose.connect("mongodb+srv://cliver:38olssal@yelpcampcluster-1byyx.mongodb.net/yelpcamp?retryWrites=true&w=majority", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://cliver:kQ6FbHhj17eumppF@yelpcampcluster-1byyx.mongodb.net/yelpcamp?retryWrites=true&w=majority", {useNewUrlParser: true});
 app.use(flash());
 //PASSPORT CONFIG
 

@@ -47,10 +47,13 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 // Tell Express to listen for requests (start server)
+
+//Code for synolgy nas
 /* app.listen(3000, function(){
 	console.log("YelpCamp server is listening on port 3000");
 }); */
 
+//Code for local and deployment environment
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 8000;

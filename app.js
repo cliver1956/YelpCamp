@@ -47,6 +47,12 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
 // Tell Express to listen for requests (start server)
-app.listen(3000, function(){
+/* app.listen(3000, function(){
 	console.log("YelpCamp server is listening on port 3000");
-});
+}); */
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
+app.listen(port);

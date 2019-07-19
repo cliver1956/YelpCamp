@@ -14,8 +14,11 @@ const   express             = require("express"),
         commentRoutes       = require("./routes/comments"),
         campgroundRoutes    = require("./routes/campgrounds"),
         indexRoutes         = require("./routes/index")
+        
+require('dotenv').config();
 
-mongoose.connect("mongodb+srv://cliver:kQ6FbHhj17eumppF@yelpcampcluster-1byyx.mongodb.net/yelpcamp?retryWrites=true&w=majority", {useNewUrlParser: true});
+// mongoose.connect("mongodb+srv://cliver:kQ6FbHhj17eumppF@yelpcampcluster-1byyx.mongodb.net/yelpcamp?retryWrites=true&w=majority", {useNewUrlParser: true});
+mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
 app.use(flash());
 //PASSPORT CONFIG
 

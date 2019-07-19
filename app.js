@@ -14,11 +14,16 @@ const   express             = require("express"),
         commentRoutes       = require("./routes/comments"),
         campgroundRoutes    = require("./routes/campgrounds"),
         indexRoutes         = require("./routes/index")
-        
+
 require('dotenv').config();
 
+//Connect to mongodb atlas (production) version of database
 // mongoose.connect("mongodb+srv://cliver:kQ6FbHhj17eumppF@yelpcampcluster-1byyx.mongodb.net/yelpcamp?retryWrites=true&w=majority", {useNewUrlParser: true});
-mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
+//Connect to local development version of database
+// mongoose.connect("mongodb://yelpcampUser:password@10.101.202.153:27017/yelpcamp?retryWrites=true&w=majority", {useNewUrlParser: true});
+//Use env variable to connect to database ** set same variable to local or remote db on dev and production environment
+const url = process.env.DATABASEURL || "mongodb://yelpcampUser:password@10.101.202.153:27017/yelpcamp?retryWrites=true&w=majority"; 
+mongoose.connect(url, {useNewUrlParser: true});
 app.use(flash());
 //PASSPORT CONFIG
 

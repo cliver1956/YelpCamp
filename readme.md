@@ -1,6 +1,3 @@
-mongodb+srv://cliver:38olssal@yelpcampcluster-1byyx.mongodb.net/test?retryWrites=true&w=majority
-mongoose.connect("mongodb+srv://cliver:38olssal@yelpcampcluster-1byyx.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true});
-
 ROUTES:
 
 name	url		verb	description
